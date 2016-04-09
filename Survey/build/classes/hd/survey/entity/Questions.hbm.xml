@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hd.survey.entity">
+
+    <class name="Questions" table="Questions" >
+       
+        <id name="id" >
+            <generator class="identity" />
+        </id>
+        
+        <property name="title" not-null="true"/>
+        <property name="type" />
+        <property name="option1" />
+        <property name="option2" />
+        <property name="option3" />
+        <property name="option4" />
+        <property name="answer1" />
+        <property name="answer2" />
+        <property name="answer3" />
+        <property name="answer4" />
+        
+       <many-to-one name="surveyId" class="Surveys" lazy="false">
+       </many-to-one>
+       
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<!-- 
+错误信息：加入日记配置出现无法创建磁盘
+<?xml version="1.0" encoding="UTF-8"?>  
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"  
+    updateCheck="false">  
+    
+    <defaultCache maxElementsInMemory="1000" eternal="false"  
+        timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true" />  
+    <cache name="com.hncares.entity.Users" eternal="false" maxElementsInMemory="1000"  
+        overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="3600"  
+        timeToLiveSeconds="3600" memoryStoreEvictionPolicy="LFU" />  
+</ehcache>  --> 

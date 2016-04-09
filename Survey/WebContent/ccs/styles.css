@@ -1,0 +1,100 @@
+.head0 {
+	position: absolute;
+	left: 160px;
+	width: 1040px;
+	height: 200px;
+	background-color: teal;
+}
+
+.head1 {
+	position: absolute;
+	top: 229px;
+	left: 160px;
+	width: 1040px;
+	height: 20px;
+	width: 1040px;
+	background-color: teal;
+}
+
+.login {
+	position: absolute;
+	top: 264px;
+	left: 160px;
+	border: outset; border-color : blue;
+	width: 1040px;
+	background-color: teal;
+	height: 420px;
+	border-color: blue;
+}
+
+.login_inter {
+	position: absolute;
+	top: 50px;
+	left: 300px;
+	height: 160px;
+	width: 440px;
+	background-color: blue;
+}
+
+.register {
+	position: absolute;
+	top: 49px;
+	left: 260px;
+	height: 320px;
+	width: 840px;
+	background-color: teal;
+}
+
+.register_inter {
+	position: absolute;
+	top: 90px;
+	left: 200px;
+	height: 160px;
+	width: 440px;
+	background-color: teal;
+}
+
+.addQuestion {
+	position: absolute;
+	border: double; top : 90px;
+	left: 300px;
+	height: 360px;
+	width: 440px;
+	background-color: write;
+	top: 90px;
+}
+
+.text1 {
+	height: 100px;
+}
+
+.Question {
+	position: absolute;
+	left: 40px;
+	border-left: outset;
+	border-left-color: black;
+	border-bottom:outset;
+	border-bottom-color:black;
+	width: 1000px;
+	
+}
+.addSurvey{
+	position: absolute;
+	top: 264px;
+	left: 160px;
+	border-left: outset;
+	border-left-color: black;
+	border-bottom:outset;
+	border-bottom-color:black;
+	width: 1040px;
+	background-color: teal;
+}
+.mySurvey{
+	position: absolute;
+	top: 264px;
+	left: 160px;
+	border: outset; border-color : blue;
+	width: 1040px;
+	background-color: teal;
+	border-color: blue;
+}

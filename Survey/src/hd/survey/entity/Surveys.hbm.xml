@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hd.survey.entity">
+
+    <class name="Surveys" table="Surveys" >
+       
+        <id name="id" >
+            <generator class="identity" />
+        </id>
+       
+        <property name="title" not-null="true"/>
+        <property name="createTime" />
+        <property name="state" />
+        <!--没有lazy="false"，查询后关闭session，无法返回list  -->
+     <many-to-one name="userId" class="Users" lazy="false">
+       </many-to-one>
+       <!--   一对多双向关联映射customer到orders，单的一方配置 -->
+        <set name="questions" cascade="all" inverse="true" lazy="true" >
+            <key column="surveyId" />
+            <one-to-many class="Questions" />
+        </set>  
+    </class>
+
+</hibernate-mapping>

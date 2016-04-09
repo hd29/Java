@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+<constant name="struts.devMode" value="true" />
+   <package name="login1" extends="struts-default">
+     
+      <action name="register" 
+            class="hd.survey.action.UserAction" 
+            method="register">
+            <result name="success" >/index.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="login" 
+            class="hd.survey.action.UserAction" 
+            method="login">
+            <result type="redirectAction" name="success" >querySurvey</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="exit" 
+            class="hd.survey.action.UserAction" 
+            method="exit">
+            <result name="success" >/index.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      
+      <action name="querySurvey" 
+            class="hd.survey.action.SurveyAction" 
+            method="querySurvey">
+            <result name="success" >/mySurvey.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="queryAllSurvey" 
+            class="hd.survey.action.SurveyAction" 
+            method="queryAllSurvey">
+            <result name="success" >/participationSurvey.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="addSurvey" 
+            class="hd.survey.action.SurveyAction" 
+            method="addSurvey">
+            <result name="success" >/mySurveyShow.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="queryQuestions" 
+            class="hd.survey.action.QuestionAction" 
+            method="queryQuestions">
+            <result name="success" >/mySurveyShow.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="resultAnalysis" 
+            class="hd.survey.action.QuestionAction" 
+            method="queryQuestions">
+            <result name="success" >/resultAnalysis.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="queryAnswerQuestions" 
+            class="hd.survey.action.QuestionAction" 
+            method="queryQuestions">
+            <result name="success" >/optionAnwser.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="addQuestion" 
+            class="hd.survey.action.AddQuestionAction" 
+            method="addQuestion">
+            <result type="chain" name="success" >queryQuestions</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <action name="saveOptin" 
+            class="hd.survey.action.GetOptinAction" 
+            method="saveOptin">
+            <result name="success" >/optionAnwsered.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action>
+      <!-- <action name="queryQuestions2" 
+            class="hd.survey.action.QuestionAction" 
+            method="queryQuestions2">
+            <result name="success" >/setSurvey.jsp</result>
+            <result name="failed">/failed.jsp</result>
+      </action> -->
+      
+   </package>
+</struts>
